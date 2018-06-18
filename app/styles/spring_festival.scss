@@ -1,0 +1,222 @@
+.box{
+  width: 92%;
+	height: auto;
+	margin: 0px auto;
+	position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+  .box-title{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: none;
+  }
+  .box-bottom{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: none;
+  }
+  .box-content{
+    width: 100%;
+    margin: -1px 0px;
+    height: auto;
+    background: url("http://resources.2ccm.net/campaign/new-year/box-middle.jpg") top center repeat-y;
+    background-size: 100% auto;
+  }
+}
+
+.box-content.coupon{
+  .coupon-notice{
+    width: 80%;
+    margin: 0px auto 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #b21e2f;
+  }
+
+  .red-envelope-button{
+    width: 200px;
+    height: 230px;
+    background: url("http://resources.2ccm.net/campaign/new-year/red-envelope.jpg") top center repeat-y;
+    background-size: 100% auto;
+    margin: 0px auto;
+    cursor: pointer;
+  }
+
+  .no-signed-tips{
+    width: 300px;
+    height: 50px;
+    background-color: #f9bec0;
+    margin: 0px auto;
+    color: #b21e2f;
+    text-align: center;
+    font-size: 13px;
+    padding: 6px;
+    line-height: 40px;
+  }
+}
+
+
+.box-content.statistics{
+  h2{
+    width: 100%;
+    text-align: center;
+    color: #b21e2f;
+    margin: 0px;
+  }
+  .number-row{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 50px;
+    .number-item{
+      width: 50%;
+      height: 100px;
+      float: left;
+      text-align: center;
+      p.value{
+        margin-top: 15px;
+        font-size: 30px;
+        color: #b21e2f;
+        font-weight: bold;
+        small{
+          font-size: 12px;
+        }
+        .vm{
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.box-content.received-coupon{
+  padding-bottom: 20px;
+  h2{
+    width: 100%;
+    text-align: center;
+    color: #b21e2f;
+    margin: 0px 0px 20px;
+  }
+  p.notice{
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+  }
+  .value{
+    font-size: 50px;
+    text-align: center;
+    color: #b21e2f;
+    margin: 10px 0px;
+  }
+  .share-button{
+    width: 188px;
+    height: 45px;
+    background-color: #b21e2f;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    font-size: 18px;
+    margin: 20px auto 0px;
+  }
+}
+
+.share-section{
+  font-family: 'Microsoft YaHei',arial,tahoma,sans-serif;
+  width: 90%;
+  margin: 0px auto;
+  position: relative;
+  background-color: rgb(245,173,177);
+  .share-section-title{
+    text-align: center;
+    font-size: 13px;
+    color: #b21e2f;
+    padding: 15px;
+    margin: 0;
+  }
+  .share-section-content{
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 15px 15px 15px;
+    .share-cashback{
+      width: 100%;
+      text-align: center;
+      font-size: 40px;
+      color: rgb(179,19,33);
+    }
+    .share-red-envelope{
+      display: block;
+      width: 149px;
+      height: 85px;
+      margin: 0px auto;
+      position: relative;
+      background: url('../images/red-envelope.png') top center no-repeat;
+      background-size: 100% auto;
+      overflow: hidden;
+    }
+
+    .share-btn{
+      display: block;
+      border: none;
+      font-size: 20px;
+      color: #fff;
+      background-color: rgb(179,19,33);
+      padding:  10px 24px;
+      text-align: center;
+      margin: 25px auto;
+      &.share-friend{
+      }
+    }
+    .share-desc{
+      width: 100%;
+      text-align: center;
+      font-size: 10px;
+      color: #b7a7a7;
+      margin-bottom: 5px;
+    }
+  }
+}
+.share-exc{
+  height: 10px;
+  width: 100%;
+}
+
+.share-result-list{
+  margin-top: 20px;
+  .share-row{
+    display: flex;
+    &>span{
+      flex: 1;
+      font-size: 12px;
+      padding: 8px;
+      height: 25px;
+      text-align: center;
+    }
+  }
+  .red-conent,.red-header{
+    background-color: #fff;
+  }
+  .red-conent{
+    padding: 10px 0;
+    &>span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        color: #b31321;
+      }
+      height: 60px;
+      border-right: 1px solid #ddd;
+    }
+    .price{
+      border-right: none;
+    }
+  }
+}

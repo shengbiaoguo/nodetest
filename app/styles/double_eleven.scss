@@ -1,0 +1,191 @@
+.page-double-eleven{
+	text-decoration: none;
+	width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 0;
+
+    *{
+    	box-sizing: border-box;
+    }
+
+    .discounts-container{
+    	position: relative;
+    	display: inline-block;
+    	width: 50%;
+    	padding-bottom: 10px;
+    	background-color: #fff;
+
+		.overflow-hidden{
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+    	.discounts-content{
+    		display: flex;
+    		justify-content: center;
+
+    		.discounts-content-detail{
+    			display: flex;
+    			align-items: flex-end; 
+    			width: 120px;
+    			height: 160px;
+    			background-size: cover;
+				background-position: center center;
+    			background-repeat: no-repeat;
+
+    			.start-sale-time{
+    				display: block;
+    				width: 100%;
+    				height: 30px;
+    				line-height: 30px;
+    				background-color: rgba(0,0,0,.85);
+					text-align: center;
+    				font-size: 10px;
+    				color: #fff;
+    				padding: 0 4px;
+    			}
+    		}
+    	}
+
+		.discounts-brand{
+			font-size: 14px;
+			color: #333;
+			text-align: center;
+			padding: 6px 0;
+		}
+
+		.discounts-name{
+			font-size: 12px;
+			color: #666;
+			text-align: center;
+			padding-bottom: 10px;
+		}
+
+		.discounts-price-container{
+			display: flex;
+			justify-content: center;
+			color: #b10c0c;
+			font-size: 15px;
+			padding-bottom: 15px;
+
+			.discounts-price{
+				margin-left: 3px;
+				color: #666;
+				font-size: 14px;
+			}
+		}
+
+    	.tips{
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		height: 20px;
+			line-height: 20px;
+    		width: 50px;
+			text-align: center;
+    		font-size: 12px;
+    		color: #fff;
+    		background-color: #901e00;
+    	}
+
+    }
+
+}
+
+
+@-webkit-keyframes spinMove {
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes spinMove {
+	to {
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes ccmRotate {
+	to {
+		-webkit-transform: rotate(405deg);
+		transform: rotate(405deg)
+	}
+}
+
+@keyframes ccmRotate {
+	to {
+		-webkit-transform: rotate(405deg);
+		transform: rotate(405deg)
+	}
+}
+.loading-container{
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loading{
+	position: relative;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-animation: ccmRotate 1.2s infinite linear;
+	animation: ccmRotate 1.2s infinite linear;
+
+	i{
+		width: 14px;
+		height: 14px;
+		border-radius: 100%;
+		background-color: #108ee9;
+		-webkit-transform: scale(.75);
+		-ms-transform: scale(.75);
+		transform: scale(.75);
+		display: block;
+		position: absolute;
+		opacity: .3;
+		-webkit-animation: spinMove 1s infinite linear alternate;
+		animation: spinMove 1s infinite linear alternate;
+		-webkit-transform-origin: 50% 50%;
+		-ms-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+	}
+
+	i:first-child {
+		left: 0;
+		top: 0;
+	}
+
+	i:nth-child(2) {
+		right: 0;
+		top: 0;
+		-webkit-animation-delay: .4s;
+		animation-delay: .4s
+	}
+
+	i:nth-child(3) {
+		right: 0;
+		bottom: 0;
+		-webkit-animation-delay: .8s;
+		animation-delay: .8s
+	}
+
+	i:nth-child(4) {
+		left: 0;
+		bottom: 0;
+		-webkit-animation-delay: 1.2s;
+		animation-delay: 1.2s
+	}
+
+}
+
+

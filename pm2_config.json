@@ -1,0 +1,10 @@
+{
+  "apps" : [{
+    "name"        		: "2ccm-campaign",
+    "script"      		: "./server/release.js",
+    "watch"       		: true,
+    "exec_mode"        		: "cluster",
+    "instances"			: "3"
+  }]
+}
+

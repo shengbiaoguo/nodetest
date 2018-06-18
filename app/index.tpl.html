@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>2ccm - Campaign</title>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+  </head>
+  <body>
+    <div id="content"></div>
+
+    <script type="text/javascript">
+      window.shareCallback = function(b) {
+        shareCallback2(b);
+      }
+      window.onload = function(){
+        // var weixin_base_url = 'http://10.0.0.22:9090';
+        var weixin_base_url = window.location.href.split('#')[0];
+
+        var sdata = {
+                title: '我，厘米哥，发券',
+                desc: '我，厘米哥，发券',
+                link: weixin_base_url,
+                imgUrl: 'https://campaign.2ccm.net/img/logo_2ccm.jpg',
+        };
+
+        Init(sdata);
+
+        function Init(sdata){
+            // wechat sdk 签名
+            fetch('https://campaign.2ccm.net' + '/rsx/0', {
+                method: "POST",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: "url=" + weixin_base_url
+            })
+            .then(function(response){
+                if(response.ok){
+                    return response.json();
+                } else {
+                    Promise.reject({
+                        status: response.status,
+                        statusText: response.statusText
+                    })
+                }
+            })
+            .then(function(res){
+                if(res.appid){
+                    wx.config({
+                        appId: res.appid,
+                        debug: false,
+                        timestamp: res.timestamp,
+                        nonceStr: res.nonceStr,
+                        signature: res.signature,
+                        jsApiList: [
+                            "checkJsApi",
+                            "onMenuShareTimeline",
+                            "onMenuShareAppMessage",
+                            "onMenuShareQQ",
+                            "onMenuShareWeibo",
+                            "onMenuShareQZone",
+                        ]
+                    });
+
+                    // 调用微信API
+                    wx.ready(function(){
+                        wx.onMenuShareTimeline(sdata);
+                        wx.onMenuShareAppMessage(sdata);
+                        wx.onMenuShareQQ(sdata);
+                        wx.onMenuShareWeibo(sdata);
+                        wx.onMenuShareQZone(sdata);
+
+                        wx.error(function (res) {
+                            console.log(res.errMsg);
+                        });
+
+                    });
+                }
+            })
+            .catch(function(error){
+                console.log(error,'------')
+            })
+        }
+    }
+
+    </script>
+  </body>
+</html>

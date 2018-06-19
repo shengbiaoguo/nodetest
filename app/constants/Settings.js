@@ -1,1 +1,0 @@
-export const PERISSION_PRIVATEKEY = 'TZxhk6tQwXdceXLQjhEkMJARGXnTCyVD'
